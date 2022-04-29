@@ -5,16 +5,16 @@ provider:
   runtime: nodejs6.10
 functions:
   hello:
-    handler: handler.hello
+    handler: functions/handler.hello
     events:
       - http:
           path: hello/get
           method: get
-  test:
-    handler: handler.test
+  user:
+    handler: functions/user.getuser
     events:
       - http:
-          path: test/get
+          path: user
           method: get
 
 # adding these two lines
